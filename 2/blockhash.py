@@ -37,6 +37,10 @@ if (len(sys.argv) != 4):
 l1 = segment_file(sys.argv[1], (int) (sys.argv[3]))
 l2 = segment_file(sys.argv[2], (int) (sys.argv[3]))
 
+if (l1 == [] or l2 == []):
+	print("Error: Number of blocks greater than number of characters in on of the files.")
+	exit(1)
+
 h1 = hash_blocks(l1)
 h2 = hash_blocks(l2)
 
